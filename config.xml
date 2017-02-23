@@ -26,4 +26,7 @@
     <engine name="windows" spec="~4.3.2" />
     <engine name="wp8" spec="~3.8.2" />
     <engine name="android" spec="~6.1.2" />
+    <plugin name="cordova-plugin-customurlscheme" spec="~4.2.0">
+        <variable name="URL_SCHEME" value="helloworld" />
+    </plugin>
 </widget>

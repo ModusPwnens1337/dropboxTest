@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src * data:">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https: 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src * data:">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -125,7 +125,7 @@
                 showPageSection('pre-auth-section');
                 // Set the login anchors href using dbx.getAuthenticationUrl()
                 var dbx = new Dropbox({ clientId: CLIENT_ID });
-                var authUrl = dbx.getAuthenticationUrl('https://www.dropbox.com/oauth2/authorize?response_type=token&client_id=8nvbrxvlg96tx1k&redirect_uri=helloworld://localhost/callback');
+                var authUrl = dbx.getAuthenticationUrl('helloworld://localhost/callback');
                 document.getElementById('authlink').href = authUrl;
                 console.log("isAuthenticated dbx: \n" + dbx + "\n authUrl: \n" + authUrl);
             }
