@@ -1,6 +1,7 @@
 (function(window){
   window.utils = {
     parseQueryString: function(str) {
+        console.log('parseQueryString: ' + str);
       var ret = Object.create(null);
 
       if (typeof str !== 'string') {

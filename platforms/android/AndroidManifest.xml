@@ -7,7 +7,6 @@
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                <data android:host="path" android:scheme="helloworld" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
